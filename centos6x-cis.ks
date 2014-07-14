@@ -53,7 +53,7 @@ logvol /var/log/audit --vgname vg_root --name audit --size=1024
 logvol /home --vgname vg_root --name home --size=1024 --grow --fsoptions="nodev"
 
 # CIS 1.4.1, 5.2.3
-bootloader --location=mbr --driveorder=vda --append="selinux=1 audit=1"
+bootloader --location=mbr --driveorder=sda --append="selinux=1 audit=1"
 reboot
 
 %packages
